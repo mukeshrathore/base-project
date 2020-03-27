@@ -8,6 +8,10 @@
       "root": "projects/base-lib",
       "sourceRoot": "projects/base-lib/src",
       "prefix": "base",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },      
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
