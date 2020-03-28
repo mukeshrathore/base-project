@@ -11,7 +11,8 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },      
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -169,7 +170,7 @@
       }
     }},
   "cli": {
-    "analytics": "411c1019-556e-44c6-b13a-7d835524f0d8"
+    "analytics": "af4b727a-5803-455b-b2c6-64971b766a03"
   },
   "defaultProject": "base-lib"
 }
