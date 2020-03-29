@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "base-lib": {
+    "lib": {
       "projectType": "library",
-      "root": "projects/base-lib",
-      "sourceRoot": "projects/base-lib/src",
-      "prefix": "base",
+      "root": "projects/lib",
+      "sourceRoot": "projects/lib/src",
+      "prefix": "lib",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -17,29 +17,29 @@
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/base-lib/tsconfig.lib.json",
-            "project": "projects/base-lib/ng-package.json"
+            "tsConfig": "projects/lib/tsconfig.lib.json",
+            "project": "projects/lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/base-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/lib/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/base-lib/src/test.ts",
-            "tsConfig": "projects/base-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/base-lib/karma.conf.js"
+            "main": "projects/lib/src/test.ts",
+            "tsConfig": "projects/lib/tsconfig.spec.json",
+            "karmaConfig": "projects/lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/base-lib/tsconfig.lib.json",
-              "projects/base-lib/tsconfig.spec.json"
+              "projects/lib/tsconfig.lib.json",
+              "projects/lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -170,7 +170,7 @@
       }
     }},
   "cli": {
-    "analytics": "af4b727a-5803-455b-b2c6-64971b766a03"
+    "analytics": "1f87d40b-d1e8-49f0-832d-4ddf6a0d923d"
   },
-  "defaultProject": "base-lib"
+  "defaultProject": "lib"
 }

@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "base-lib": [
-        "dist/base-lib/base-lib",
-        "dist/base-lib"
+      "lib": [
+        "dist/lib/lib",
+        "dist/lib"
       ]
     }
   },
