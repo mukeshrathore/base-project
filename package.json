@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --project=base-app --port=4201 -o",
+    "buildLib":"ng build --project=lib --watch",
+    "build": "ng build --project=base-app",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
