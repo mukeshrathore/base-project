@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule, LibModule } from 'lib';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
+    LibModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
