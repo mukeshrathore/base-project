@@ -1,3 +1,69 @@
+// palette reference: $mat-indigo from https://github.com/angular/components/blob/master/src/material/core/theming/_palette.scss
+$mat-custom-palette-1:(
+  50: #e8eaf6,
+  100: #c5cae9,
+  200: #9fa8da,
+  300: #7986cb,
+  400: #5c6bc0,
+  500: #3f51b5,
+  600: #3949ab,
+  700: #303f9f,
+  800: #283593,
+  900: #1a237e,
+  A100: #8c9eff,
+  A200: #536dfe,
+  A400: #3d5afe,
+  A700: #304ffe,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$mat-custom-palette-2:( // $mat-pink
+ 50: #fce4ec,
+  100: #f8bbd0,
+  200: #f48fb1,
+  300: #f06292,
+  400: #ec407a,
+  500: #e91e63,
+  600: #d81b60,
+  700: #c2185b,
+  800: #ad1457,
+  900: #880e4f,
+  A100: #ff80ab,
+  A200: #ff4081,
+  A400: #f50057,
+  A700: #c51162,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -12,11 +78,11 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$base-app-primary: mat-palette($mat-indigo);
-$base-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$base-app-primary: mat-palette($mat-custom-palette-1,900,A400);
+$base-app-accent: mat-palette($mat-custom-palette-1, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$base-app-warn: mat-palette($mat-red);
+$base-app-warn: mat-palette($mat-custom-palette-1,50);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $base-app-theme: mat-light-theme($base-app-primary, $base-app-accent, $base-app-warn);
@@ -26,7 +92,29 @@ $base-app-theme: mat-light-theme($base-app-primary, $base-app-accent, $base-app-
 // that you are using.
 @include angular-material-theme($base-app-theme);
 
-/* You can add global styles to this file, and also import other style files */
+$button-primary: mat-palette($mat-custom-palette-1,A200,A400);
+$button-accent: mat-palette($mat-custom-palette-2,50,A100,A400);
+$button-warn: mat-palette($mat-custom-palette-1,200);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Created then theme object for buttons
+$button-theme: mat-light-theme($button-primary,$button-accent,$button-warn);
+.buttons{
+    @include angular-material-theme($button-theme);
+}
+
+// Define a custom typography config that overrides the font-family as well as the
+// 'headlines' and 'body-1' levels
+$typography:mat-typography-config(
+    $font-family:'Roboto, "Helvetica Neue", sans-serif',
+    $headline:mat-typography-level(32px,48px,700),
+    $body-1:mat-typography-level(14px,24px,500)
+);
+
+// Override typography CSS classes (e.g., mat-h1,mat-display-1,mat-typography,etc.).
+@include mat-base-typography($typography);
+
+// Override typography for a specific Angular material components
+@include mat-checkbox-typography($typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($typography);
