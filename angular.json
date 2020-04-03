@@ -73,6 +73,7 @@
               "projects/base-app/src/assets"
             ],
             "styles": [
+              "projects/base-app/src/theme.scss",
               "projects/base-app/src/styles.scss"
             ],
             "scripts": []
@@ -137,6 +138,7 @@
               "projects/base-app/src/assets"
             ],
             "styles": [
+              "projects/base-app/src/theme.scss",
               "projects/base-app/src/styles.scss"
             ],
             "scripts": []
@@ -168,7 +170,8 @@
           }
         }
       }
-    }},
+    }
+  },
   "cli": {
     "analytics": "1f87d40b-d1e8-49f0-832d-4ddf6a0d923d"
   },
