@@ -1,4 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+$text-color:#222;
+$font-family: Roboto, "Helvetica Neue", sans-serif;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: $font-family;
+    font-size: 14px;
+    color: $text-color;
+    font-style: normal;
+    line-height: 1.4;
+    background-color: #f2f2f2;
+    min-width: 1300px !important;
+}
+
+// Generic Classes
+.mrg0{margin:0 !important;}
+.mrgTop0{margin-top:0 !important;}
+.mrgBtm0{margin-bottom:0 !important;}
+.mrgLt0{margin-left:0 !important;}
+.mrgRt0{margin-right:0 !important;}
+
+// .mrg5
+// .mrg10
+// .mrg15
+// .mrg20
+
+// .pad5
+// .pad10
+// .pad15
+// .pad20
+
+.pos-abs{position: absolute;}
+.pos-rel{position: relative;}
+.width{width: 100% !important;}
+.inline-block{display: inline-block;}
+.block{display: block;}
+.display-flex{display: flex;}
+.border0{border: 0;}
+.borderRad0{border-radius: 0;}
+texrtarea{resize: none!important;}
+
+// Heading Styles
+
+.line-height-1{line-height: 1;}
+.flex-space{flex:1 1 auto;}
+.center-align{text-align: center;}
