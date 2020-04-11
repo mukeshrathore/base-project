@@ -1,15 +1,48 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>BaseApp</title>
+
+  <!-- if we observe path error in deployed code try using href="./" path -->
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- below meta works for Edge and other browser to remove autodetection of telephone links  -->
+  <meta name="format-detection" content="telephone=no">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- material default fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <!-- default material icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body class="mat-typography">
-  <app-root></app-root>
+  <app-root>
+    <!-- Below code is acting like splash/Loading Screen -->
+    <!-- Declaring the styles below is more appropriate since it gets completely discarded once angular has finished bootstrapping the root component -->
+    <style>
+      body {
+        background-color: #f2f2f2;
+      }
+
+      app-root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #696b6e;
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+
+    Application Loading...
+
+  </app-root>
 </body>
+
 </html>
