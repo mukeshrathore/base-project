@@ -5,4 +5,4 @@
 export * from './lib/lib.service';
 export * from './lib/lib.component';
 export * from './lib/lib.module';
-export * from './lib/material.module';
+export * from './lib/modules/material.module';
