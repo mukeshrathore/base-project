@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --project=base-app --port=4201 -o",
-    "buildLib":"ng build --project=lib --watch",
+    "buildLib": "ng build --project=app-lib --watch",
     "build": "ng build --project=base-app",
     "test": "ng test",
     "lint": "ng lint",

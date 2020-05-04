@@ -48,6 +48,51 @@
         }
       }
     },
+    "app-lib": {
+      "projectType": "library",
+      "root": "projects/app-lib",
+      "sourceRoot": "projects/app-lib/src",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/app-lib/tsconfig.lib.json",
+            "project": "projects/app-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/app-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app-lib/src/test.ts",
+            "tsConfig": "projects/app-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/app-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-lib/tsconfig.lib.json",
+              "projects/app-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "base-app": {
       "projectType": "application",
       "schematics": {
@@ -175,5 +220,5 @@
   "cli": {
     "analytics": "1f87d40b-d1e8-49f0-832d-4ddf6a0d923d"
   },
-  "defaultProject": "lib"
+  "defaultProject": "app-lib"
 }

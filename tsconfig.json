@@ -19,6 +19,10 @@
       "lib": [
         "dist/lib/lib",
         "dist/lib"
+      ],
+      "app-lib": [
+        "dist/app-lib/app-lib",
+        "dist/app-lib"
       ]
     }
   },

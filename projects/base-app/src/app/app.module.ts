@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule, LibModule } from 'lib';
+import { MaterialModule, AppLibModule } from 'app-lib';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { MaterialModule, LibModule } from 'lib';
   imports: [
     BrowserModule,
     MaterialModule,
-    LibModule,
+    AppLibModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
