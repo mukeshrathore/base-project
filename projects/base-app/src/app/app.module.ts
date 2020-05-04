@@ -12,8 +12,8 @@ import { MaterialModule, AppLibModule } from 'app-lib';
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
     AppLibModule,
+    MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
