@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-session-timeout',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SessionTimeoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(titleService: Title) { titleService.setTitle('Session Timeout'); }
 
   ngOnInit(): void {
   }
